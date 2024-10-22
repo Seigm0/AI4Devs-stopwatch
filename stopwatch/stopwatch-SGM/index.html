@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro y Temporizador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .timer-display {
+            font-size: 48px;
+            background-color: #e0e0ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .start {
+            background-color: #28a745;
+            color: white;
+        }
+        .clear {
+            background-color: #dc3545;
+            color: white;
+        }
+        .menu {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <button id="select-cronometro" class="button start">Cronómetro</button>
+    <button id="select-temporizador" class="button start">Temporizador</button>
+</div>
+
+<div class="container hidden" id="cronometro-container">
+    <div class="timer-display" id="cronometro-display">00:00:00:000</div>
+    <div class="buttons">
+        <button class="button start" id="cronometro-start">Start</button>
+        <button class="button clear" id="cronometro-clear">Clear</button>
+    </div>
+</div>
+
+<div class="container hidden" id="temporizador-container">
+    <div class="timer-display" id="temporizador-display">00:00:00</div>
+    <input type="number" id="temporizador-input" placeholder="Enter seconds">
+    <div class="buttons">
+        <button class="button start" id="temporizador-start">Start</button>
+        <button class="button clear" id="temporizador-clear">Clear</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
